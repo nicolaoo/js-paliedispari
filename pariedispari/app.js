@@ -24,10 +24,19 @@ if (restoSomma === 0){
 
 if ((restoSomma === 0) && (pariDispariUser === 'pari')){
     console.log('hai vinto tu!!')
+    document.getElementById('winner-is').innerHTML = 'Hai vinto'
 } else if ((restoSomma === 1) && (pariDispariUser === 'dispari')){
     console.log('hai vinto')
+    document.getElementById('numero-is').innerHTML = 'Hai vinto' 
 } else {
     console.log('hai perso')
+    document.getElementById('winner-is').innerHTML = 'Hai perso'
 }
+
+document.getElementById('numero-user').innerHTML = numUser
+document.getElementById('numero-pc').innerHTML = numPc
+document.getElementById('risultato').innerHTML = sommaPcUser + ' ' + pariDispariUser
+
+
 
 console.log(pariDispariUser, sommaPcUser)

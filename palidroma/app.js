@@ -4,3 +4,29 @@
 
 
 let parolaUtente = prompt('inserisci un parola palidroma')
+
+
+// se la parola inzia e finisce con le stesse parole console.log(parole è palidroma)
+
+//come faccio a capire se hanno le stesse parole
+let parolaMinuscola = parolaUtente.toLowerCase('')
+
+let wordSection = parolaUtente.split('')
+
+let firstWord = wordSection[0]
+let secondWord = wordSection[1]
+
+let lastWord = wordSection.length-1
+let pnLastWord = wordSection.length-2
+
+
+if ((firstWord === lastWord) || (secondWord === pnLastWord)) {
+    console.log('questa parola è polidroma')
+} else{
+    console.log('questa parola è normale')
+}
+
+console.log(parolaUtente)
+console.log(wordSection)
+console.log(firstWord,secondWord,pnLastWord, lastWord)
+

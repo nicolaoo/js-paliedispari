@@ -4,15 +4,17 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Comunichiamo all’utente chi ha vinto. (decidete voi come)  
 
-
 let pariDispariUser = prompt('scegli tra pari e dispari') 
-let numUser = parseInt(prompt('segli un numero da 1 a 5'))
+let numUser
 
-
+while( isNaN(numUser) || numUser < 1 || numUser >5){
+    numUser = parseInt(prompt('segli un numero da 1 a 5'))
+}
 
 let numPc = Math.floor(Math.random() * (5 - 1 + 1) + 1);
 
 let sommaPcUser = numPc + numUser
+
 
 let restoSomma = sommaPcUser % 2
 
@@ -40,3 +42,19 @@ document.getElementById('risultato').innerHTML = sommaPcUser + ' ' + pariDispari
 
 
 console.log(pariDispariUser, sommaPcUser)
+
+
+
+
+
+
+// function isEven(numUser){
+//     let restoSomma = sommaPcUser % 2
+
+//     if (restoSomma === 0){
+//         console.log('il numero è pari')
+//     }else if (restoSomma === 1){
+//         console.log('il numero è dispari')
+//     }
+//     console.log(numUser)
+// } 
